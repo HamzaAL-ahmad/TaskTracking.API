@@ -28,7 +28,6 @@ namespace TaskTracking.API.Controllers
                 return Unauthorized();
             }
 
-            // Set the user ID for the task
             taskDto.UserId = Guid.Parse(userId);
 
             var result = await _taskServices.AddAsync(taskDto);
